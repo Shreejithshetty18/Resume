@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background: #007BFF;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 2rem;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Personal Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('bio')">Bio-data</a></li>
+                <li><a href="#" onclick="showPage('resume')">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="page">
+            <h2>Welcome</h2>
+            <p>Hello! I’m [Your Name], a passionate developer with skills in web development. Explore my bio-data and resume to know more!</p>
+        </section>
+        <section id="bio" class="page hidden">
+            <h2>Bio-data</h2>
+            <ul>
+                <li><strong>Name:</strong> [Your Name]</li>
+                <li><strong>Date of Birth:</strong> [Your DOB]</li>
+                <li><strong>Address:</strong> [Your Address]</li>
+                <li><strong>Email:</strong> [Your Email]</li>
+                <li><strong>Phone:</strong> [Your Phone]</li>
+            </ul>
+        </section>
+        <section id="resume" class="page hidden">
+            <h2>Resume</h2>
+            <h3>Professional Experience</h3>
+            <p>[Details about your professional background]</p>
+            <h3>Education</h3>
+            <p>[Details about your education]</p>
+            <h3>Skills</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 [Your Name]. All Rights Reserved.</p>
+    </footer>
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.add('hidden'));
+            document.getElementById(pageId).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
